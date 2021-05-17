@@ -39,7 +39,7 @@ public class StationCtrl extends Controller
         station.readings.remove(reading);
         station.save();
         reading.delete();
-        render("station.html", station);
+        redirect ("/stations/" + id);
     }
 
     public static void addReading(Long id, int code, float temperature, float windSpeed, int windDirection, int pressure)
