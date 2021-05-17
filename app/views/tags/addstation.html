@@ -1,0 +1,30 @@
+<form class="ui stacked segment form" action="/dashboard/addstation" method="POST">
+
+    <table class="ui fixed table">
+        <thead>
+        <tr>
+            <th>Station Name</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>
+                <input placeholder="Name" type="text" name="name">
+            </th>
+            <td>
+                <input placeholder="Lat" type="number" step="any" name="lat">
+            </td>
+            <td>
+                <input placeholder="Lng" type="number" step="any" name="lng">
+            </td>
+            <td>
+                <button class="ui left button">Add Station</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    </form>
