@@ -155,8 +155,8 @@ public class StationAnalytics {
                     maxCelcius = reading;
                 }
             }
-            return maxCelcius.temperature;
-        } return 0;
+            return 0;
+        } return maxCelcius.temperature;
 
     }
 
@@ -169,9 +169,9 @@ public class StationAnalytics {
                     minCelcius = reading;
                 }
             }
-            return minCelcius.temperature;
+            return 0;
         }
-        return 0;
+        return minCelcius.temperature;
     }
 
     public static float getmaxWind(List<Reading> readings) {
@@ -183,9 +183,9 @@ public class StationAnalytics {
                     maxWind = reading;
                 }
             }
-            return maxWind.windSpeed;
+            return 0;
         }
-        return 0;
+        return maxWind.windSpeed;
     }
 
     public static float getminWind(List<Reading> readings) {
@@ -197,9 +197,9 @@ public class StationAnalytics {
                     minWind = reading;
                 }
             }
-            return minWind.windSpeed;
+            return 0;
         }
-        return 0;
+        return minWind.windSpeed;
     }
 
     public static float getmaxPressure(List<Reading> readings) {
@@ -211,9 +211,9 @@ public class StationAnalytics {
                     maxPressure = reading;
                 }
             }
-            return maxPressure.pressure;
+            return 0;
         }
-        return 0;
+        return maxPressure.pressure;
     }
 
     public static float getminPressure(List<Reading> readings) {
@@ -225,9 +225,9 @@ public class StationAnalytics {
                     minPressure = reading;
                 }
             }
-            return minPressure.pressure;
+            return 0;
         }
-        return 0;
+        return minPressure.pressure;
     }
 
     public static String getlatesticon(List<Reading> readings) {
