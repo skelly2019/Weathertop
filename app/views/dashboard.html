@@ -7,6 +7,57 @@
   ${member.firstname} ${member.lastname}'s stations
 </h3>
 
+<section class="ui segment">
+  <h2 class="ui header">
+
+  </h2>
+
+  <div class="ui five column padded grid">
+    <div class="blue column">
+      <i class="map marked icon"></i>
+      <p>${station.name}</p>
+      <p>Latitude: ${station.lat}</p>
+      <p>Longitude: ${station.lng}</p>
+    </div>
+    <div class="teal column">
+      <i class="${latestIcon}"></i>
+      <p>Weather</p>
+      <p> Latest reading: ${latestWeather} </p>
+
+    </div>
+    <div class="green column">
+      <i class="temperature high icon"></i>
+      <p>Temperature</p>
+      <p> ${latestCelsius} C</p>
+      <p> ${latestFahrenheit} F </p>
+      <p> Max: ${maxCelcius} - Min: ${minCelcius}</p>
+
+    </div>
+    <div class="olive column">
+      <i class="wind icon"></i>
+      <p>Wind</p>
+      <p> Wind ${latestwindSpeed} bft </p>
+      <p> ${latestwindCompass} </p>
+      <p> Feels like: ${latestwindChill} C </p>
+      <p> Max: ${maxWind} - Min: ${minWind} </p>
+
+    </div>
+    <div class="yellow column">
+      <i class= "compass outline icon" ></i>
+      <p>Pressure</p>
+      <p> Pressure ${latestpressure} hpa </p>
+      <p> Max: ${maxPressure} - Min: ${minPressure} </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
 #{list items:stations, as:'station'}
 
 <h5>${station.name}</h5>
