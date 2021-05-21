@@ -26,7 +26,7 @@ public class StationCtrl extends Controller
         Float minPressure = StationAnalytics.getminPressure(station.readings);
         Float maxPressure = StationAnalytics.getmaxPressure(station.readings);
         String latestIcon = StationAnalytics.getlatesticon(station.readings);
-        render("station.html","dashboard.html", station, latestWeather, latestCelsius, latestFahrenheit,
+        render("station.html", station, latestWeather, latestCelsius, latestFahrenheit,
                 latestwindSpeed, latestpressure, latestwindCompass, latestwindChill, maxCelcius,
                 minCelcius, maxWind, minWind, minPressure, maxPressure, latestIcon);
     }
