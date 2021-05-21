@@ -147,87 +147,70 @@ public class StationAnalytics {
     }
 
     public static float getmaxCelcius(List<Reading> readings) {
-        Reading maxCelcius = null;
-        if (readings.size() > 0) {
-            maxCelcius = readings.get(0);
-            for (Reading reading : readings) {
-                if (reading.temperature > maxCelcius.temperature) {
-                    maxCelcius = reading;
-                }
-            }
-            return 0;
-        } return maxCelcius.temperature;
 
+        if (readings.size() != 0) {
+            Reading maxCelcius = readings.get(0);
+            for (Reading reading : readings) {
+                if (reading.temperature > maxCelcius.temperature)
+                    maxCelcius = reading;
+            }
+            return maxCelcius.temperature;
+        } else return 0;
     }
 
     public static float getminCelcius(List<Reading> readings) {
-        Reading minCelcius = null;
-        if (readings.size() > 0) {
-            minCelcius = readings.get(0);
+        if (readings.size() != 0) {
+            Reading minCelcius = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.temperature < minCelcius.temperature) {
+                if (reading.temperature < minCelcius.temperature)
                     minCelcius = reading;
-                }
             }
-            return 0;
-        }
-        return minCelcius.temperature;
+            return minCelcius.temperature;
+        } else return 0;
     }
 
     public static float getmaxWind(List<Reading> readings) {
-        Reading maxWind = null;
-        if (readings.size() > 0) {
-            maxWind = readings.get(0);
+        if (readings.size() != 0) {
+            Reading maxWind = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.windSpeed > maxWind.windSpeed) {
+                if (reading.windSpeed > maxWind.windSpeed)
                     maxWind = reading;
-                }
             }
-            return 0;
-        }
-        return maxWind.windSpeed;
+            return maxWind.windSpeed;
+        } else return 0;
     }
 
     public static float getminWind(List<Reading> readings) {
-        Reading minWind = null;
-        if (readings.size() > 0) {
-            minWind = readings.get(0);
+        if (readings.size() != 0) {
+            Reading minWind = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.windSpeed < minWind.windSpeed) {
+                if (reading.windSpeed < minWind.windSpeed)
                     minWind = reading;
-                }
             }
-            return 0;
-        }
-        return minWind.windSpeed;
+            return minWind.windSpeed;
+        } else return 0;
     }
 
     public static float getmaxPressure(List<Reading> readings) {
-        Reading maxPressure = null;
-        if (readings.size() > 0) {
-            maxPressure = readings.get(0);
+        if (readings.size() != 0) {
+            Reading maxPressure = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.pressure > maxPressure.pressure) {
+                if (reading.pressure > maxPressure.pressure)
                     maxPressure = reading;
-                }
             }
-            return 0;
-        }
-        return maxPressure.pressure;
+            return maxPressure.pressure;
+        } else return 0;
     }
 
     public static float getminPressure(List<Reading> readings) {
-        Reading minPressure = null;
-        if (readings.size() > 0) {
-            minPressure = readings.get(0);
+        if (readings.size() != 0) {
+            Reading minPressure = readings.get(0);
             for (Reading reading : readings) {
-                if (reading.pressure < minPressure.pressure) {
+                if (reading.pressure < minPressure.pressure)
                     minPressure = reading;
-                }
             }
-            return 0;
-        }
-        return minPressure.pressure;
+            return minPressure.pressure;
+        } else return 0;
     }
 
     public static String getlatesticon(List<Reading> readings) {
