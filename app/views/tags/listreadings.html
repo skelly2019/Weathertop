@@ -12,6 +12,7 @@
     <tbody>
     #{list items:_station.readings, as:'reading'}
 
+
     <tr>
         <td>
             ${reading.code}
@@ -25,7 +26,6 @@
         <td>
             ${reading.windDirection}
         </td>
-
         <td>
             ${reading.pressure}
         </td>
@@ -34,9 +34,6 @@
         </td>
     </tr>
     #{/list}
-
-
-
 
     </tbody>
 </table>

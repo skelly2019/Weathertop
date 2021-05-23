@@ -4,10 +4,9 @@ import models.Reading;
 
 import java.util.List;
 
-
 public class StationAnalytics {
 
-    public static String getlatestWeather(List<Reading> readings) {
+    public static String getlatestWeather(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestWeather = readings.get(readings.size() - 1);
 
@@ -36,8 +35,7 @@ public class StationAnalytics {
         return null;
     }
 
-
-    public static float getlatestCelsius(List<Reading> readings) {
+    public static float getlatestCelsius(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestCelsius = readings.get(readings.size() - 1);
 
@@ -48,7 +46,7 @@ public class StationAnalytics {
         return 0;
     }
 
-    public static float getlatestFahrenheit(List<Reading> readings) {
+    public static float getlatestFahrenheit(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestFahrenheit = readings.get(readings.size() - 1);
 
@@ -58,7 +56,7 @@ public class StationAnalytics {
         return 0;
     }
 
-    public static float getlatestwindSpeed(List<Reading> readings) {
+    public static float getlatestwindSpeed(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestwindSpeed = readings.get(readings.size() - 1);
 
@@ -68,7 +66,7 @@ public class StationAnalytics {
         return 0;
     }
 
-    public static float getlatestpressure(List<Reading> readings) {
+    public static float getlatestpressure(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestpressure = readings.get(readings.size() - 1);
 
@@ -78,7 +76,7 @@ public class StationAnalytics {
         return 0;
     }
 
-    public static String getlatestwindCompass(List<Reading> readings) {
+    public static String getlatestwindCompass(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestwindCompass = readings.get(readings.size() - 1);
 
@@ -134,23 +132,23 @@ public class StationAnalytics {
         return null;
     }
 
-    public static int getlatestwindChill(List<Reading> readings) {
+    public static int getlatestwindChill(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestwindChill = readings.get(readings.size() - 1);
 
             int V = latestwindChill.windDirection;
             float T = latestwindChill.temperature;
-            final int i = (int) (13.12 + (0.6215 * T) - 11.37 * (Math.pow(V, 0.16)) + (0.39 * T) * (Math.pow(V, 0.16)));
+            final int i = (int)(13.12 + (0.6215 * T) - 11.37 * (Math.pow(V, 0.16)) + (0.39 * T) * (Math.pow(V, 0.16)));
             return i;
         }
         return 0;
     }
 
-    public static float getmaxCelcius(List<Reading> readings) {
+    public static float getmaxCelcius(List < Reading > readings) {
 
         if (readings.size() != 0) {
             Reading maxCelcius = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.temperature > maxCelcius.temperature)
                     maxCelcius = reading;
             }
@@ -158,10 +156,10 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static float getminCelcius(List<Reading> readings) {
+    public static float getminCelcius(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading minCelcius = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.temperature < minCelcius.temperature)
                     minCelcius = reading;
             }
@@ -169,10 +167,10 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static float getmaxWind(List<Reading> readings) {
+    public static float getmaxWind(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading maxWind = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.windSpeed > maxWind.windSpeed)
                     maxWind = reading;
             }
@@ -180,10 +178,10 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static float getminWind(List<Reading> readings) {
+    public static float getminWind(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading minWind = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.windSpeed < minWind.windSpeed)
                     minWind = reading;
             }
@@ -191,10 +189,10 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static float getmaxPressure(List<Reading> readings) {
+    public static float getmaxPressure(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading maxPressure = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.pressure > maxPressure.pressure)
                     maxPressure = reading;
             }
@@ -202,10 +200,10 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static float getminPressure(List<Reading> readings) {
+    public static float getminPressure(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading minPressure = readings.get(0);
-            for (Reading reading : readings) {
+            for (Reading reading: readings) {
                 if (reading.pressure < minPressure.pressure)
                     minPressure = reading;
             }
@@ -213,7 +211,7 @@ public class StationAnalytics {
         } else return 0;
     }
 
-    public static String getlatesticon(List<Reading> readings) {
+    public static String getlatesticon(List < Reading > readings) {
         if (readings.size() != 0) {
             Reading latestIcon = readings.get(readings.size() - 1);
 
@@ -242,19 +240,4 @@ public class StationAnalytics {
         return null;
     }
 
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

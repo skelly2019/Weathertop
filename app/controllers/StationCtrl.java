@@ -6,12 +6,10 @@ import play.Logger;
 import play.mvc.Controller;
 import utils.StationAnalytics;
 
-public class StationCtrl extends Controller
-{
-    public static void index(Long id)
-    {
+public class StationCtrl extends Controller {
+    public static void index(Long id) {
         Station station = Station.findById(id);
-        Logger.info ("Station id = " + id);
+        Logger.info("Station id = " + id);
         String latestWeather = StationAnalytics.getlatestWeather(station.readings);
         Float latestCelsius = StationAnalytics.getlatestCelsius(station.readings);
         Float latestFahrenheit = StationAnalytics.getlatestFahrenheit(station.readings);
@@ -31,23 +29,21 @@ public class StationCtrl extends Controller
                 minCelcius, maxWind, minWind, minPressure, maxPressure, latestIcon);
     }
 
-    public static void deletereading (Long id, Long readingid)
-    {
+    public static void deletereading(Long id, Long readingid) {
         Station station = Station.findById(id);
         Reading reading = Reading.findById(readingid);
-        Logger.info ("Removing" + reading.code);
+        Logger.info("Removing" + reading.code);
         station.readings.remove(reading);
         station.save();
         reading.delete();
-        redirect ("/stations/" + id);
+        redirect("/stations/" + id);
     }
 
-    public static void addReading(Long id, int code, float temperature, float windSpeed, int windDirection, int pressure)
-    {
-        Reading reading = new Reading(code, temperature, windSpeed, windDirection,pressure);
+    public static void addReading(Long id, int code, float temperature, float windSpeed, int windDirection, int pressure) {
+        Reading reading = new Reading(code, temperature, windSpeed, windDirection, pressure);
         Station station = Station.findById(id);
         station.readings.add(reading);
         station.save();
-        redirect ("/stations/" + id);
+        redirect("/stations/" + id);
     }
 }

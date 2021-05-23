@@ -5,32 +5,22 @@
 
 #{list items:stations, as:'station'}
 
-
 <h3 class="blue ui top attached header">
   ${member.firstname} ${member.lastname}'s stations
 </h3>
-
-
 <h5>${station.name}</h5>
 <p>Latitude: ${station.lat}</p>
 <p>Longitude ${station.lng}</p>
 <img class="ui tiny image" src="/public/images/weatherstart.jpg">
-
 <section class="ui segment">
-
   <a href="/stations/${station.id}" class="ui icon button">
     <i class="icon folder open"></i>
-
   </a>
   <a href="/dashboard/${member.id}/deletestation/${station.id}" class="ui icon button">
     <i class="icon trash"></i>
   </a>
 </section>
 #{/list}
-
-
-
-
 #{addstation /}
 
 
